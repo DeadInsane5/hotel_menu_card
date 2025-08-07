@@ -1,14 +1,15 @@
-function Card(props) {
+function Card({ image, name, desc, price, tags }) {
   return (
-    <div className="w-sm p-2 rounded-2xl flex flex-col gap-1">
-      <img className="w-sm rounded-2xl" src="biryani.jpg" alt="image" />
+    <div className="max-w-[28vw] p-2 py-4 rounded-2xl duration-200 ease-in-out flex flex-col gap-3 hover:scale-104">
+      <img className="h-[25vh] w-[40vw] object-cover rounded-2xl" src={image} alt="image" />
 
-      <div className="flex justify-between">
-        <h1>{props.name}</h1>
-        <h1 className="text-orange-300">{props.price}</h1>
+      <div className="px-2 flex justify-between">
+        <h1 className="text-xl font-bold">{name}</h1>
+        <h1 className="text-xl font-bold text-orange-300">{price}</h1>
       </div>
+      <p className="px-2 min-h-12 text-sm">{desc}</p>
 
-      <h1 className="max-w-fit p-1 px-2 bg-amber-200 rounded-full">{props.tags}</h1>
+      <h1 className="max-w-fit p-1 px-2 bg-amber-200 rounded-full">{tags}</h1>
     </div>
   )
 }
