@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './components/card'
+import Footer from './components/footer';
 import Header from './components/header';
 import Section from './components/section';
 
@@ -188,6 +189,7 @@ function App() {
       <Section id="snacks" title="Snacks" food_items={food_items_snacks} />
       <Section id="continental" title="Continental" food_items={food_items_continental} />
       <Section id="asian" title="Asian" food_items={food_items_asian} />
+      <Footer />
     </>
   )
 }
