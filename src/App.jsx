@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './components/card'
+import Header from './components/header';
 import Section from './components/section';
 
 const food_items_starters = [
@@ -181,12 +182,12 @@ const food_items_asian = [
 function App() {
   return (
     <>
-      <Section title="Starters" food_items={food_items_starters} />
-      <Section title="Main Course" food_items={food_items_main_course} />
-      <Section title="Snacks" food_items={food_items_snacks} />
-      <Section title="Continental" food_items={food_items_continental} />
-      <Section title="Asian" food_items={food_items_asian} />
-
+      <Header />
+      <Section id="starters" title="Starters" food_items={food_items_starters} />
+      <Section id="main_course" title="Main Course" food_items={food_items_main_course} />
+      <Section id="snacks" title="Snacks" food_items={food_items_snacks} />
+      <Section id="continental" title="Continental" food_items={food_items_continental} />
+      <Section id="asian" title="Asian" food_items={food_items_asian} />
     </>
   )
 }
